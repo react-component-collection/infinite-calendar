@@ -33,7 +33,8 @@
     "prettier": "^2.5.1",
     "react-tiny-virtual-list": "^2.0.0",
     "react-transition-group": "^1.1.3",
-    "recompose": "^0.22.0"
+    "recompose": "^0.22.0",
+    "rollup-plugin-sass": "^1.2.10"
   },
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.0"
