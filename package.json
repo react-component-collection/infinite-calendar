@@ -69,15 +69,14 @@
     "name": "Yumin Gui",
     "email": "yumindev@gmail.com"
   },
-  "user": "clauderic",
-  "homepage": "https://github.com/clauderic/react-infinite-calendar",
+  "homepage": "https://github.com/react-component-collection/infinite-calendar",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/clauderic/react-infinite-calendar.git"
+    "url": "https://github.com/react-component-collection/infinite-calendar.git"
   },
   "bugs": {
-    "url": "https://github.com/clauderic/react-infinite-calendar/issues"
+    "url": "https://github.com/react-component-collection/infinite-calendar/issues"
   },
   "keywords": [
     "react",
