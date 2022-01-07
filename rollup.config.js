@@ -6,6 +6,8 @@ import livereload from "rollup-plugin-livereload";
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import sass from "rollup-plugin-sass";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import nodePolyfills from "rollup-plugin-polyfill-node";
 
 export default {
   input: "src/index.js", // our source file
@@ -13,10 +15,12 @@ export default {
     {
       file: pkg.main,
       format: "cjs",
+      exports: "named",
     },
     {
       file: pkg.module,
       format: "es", // the preferred format
+      exports: "named",
     },
   ],
   external: [...Object.keys(pkg.dependencies || {})],
@@ -26,6 +30,8 @@ export default {
       babelHelpers: "bundled",
     }),
     sass(),
+    nodeResolve(),
+    nodePolyfills({ sourceMap: true }),
     commonjs(),
     typescript({
       typescript: require("typescript"),
