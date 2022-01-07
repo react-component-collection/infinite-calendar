@@ -1,20 +1,66 @@
 {
-  "extends": "react-app",
-  "rules": {
-    "comma-dangle": ["error", "always-multiline"],
-    "indent": ["error", 2, {"SwitchCase": 1}],
-    "semi": ["error", "always"],
-    "sort-keys": ["warn", "asc", {"caseSensitive": false, "natural": true}],
-    "no-mixed-operators": [
-      "warn",
-      {
-        "groups": [
-          ['&', '|', '^', '~', '<<', '>>', '>>>'],
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['in', 'instanceof']
-        ],
-        "allowSamePrecedence": true
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["import", "react", "react-hooks", "@babel"],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/resolver": {
+      "babel-module": {
+        "extensions": [".js", ".jsx"]
+      },
+      "alias": {
+        "src": "./src",
+        "img": "./images"
       }
-    ]
-  }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "tabWidth": 4,
+        "ignoreUrls": true
+      }
+    ],
+    "jsx-a11y/no-autofocus": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "all",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-duplicate-imports": "error"
+  },
+  "overrides": [
+    {
+      "files": ["./bin/**", "./webpack.*"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
 }
