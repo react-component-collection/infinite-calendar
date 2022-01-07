@@ -32,7 +32,9 @@ export default {
     sass(),
     nodeResolve(),
     nodePolyfills({ sourceMap: true }),
-    commonjs(),
+    commonjs({
+      include: /node_modules/,
+    }),
     typescript({
       typescript: require("typescript"),
     }),
