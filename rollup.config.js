@@ -1,4 +1,4 @@
-// import typescript from "rollup-plugin-typescript2";
+import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
 
@@ -49,9 +49,9 @@ export default {
     commonjs({
       include: /node_modules/,
     }),
-    // typescript({
-    //   typescript: require("typescript"),
-    // }),
+    typescript({
+      typescript: require("typescript"),
+    }),
     terser(), // minifies generated bundles
     livereload({ watch: ["lib", "es"] }),
   ],
