@@ -7,7 +7,7 @@ import { emptyFn, getMonth, getWeek, getWeeksInMonth, animate } from "../utils";
 import { parse, startOfMonth } from "date-fns";
 
 import Month from "../Month";
-import styles from "./MonthList.scss";
+import styles from "./MonthList.module.scss";
 
 const AVERAGE_ROWS_PER_MONTH = 5;
 

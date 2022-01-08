@@ -6,7 +6,7 @@ import { emptyFn, getMonthsForYear } from "../utils";
 
 import { format, isAfter, isBefore, isSameMonth } from "date-fns";
 
-import styles from "./Years.scss";
+import styles from "./Years.module.scss";
 
 const SPACING = 40;
 

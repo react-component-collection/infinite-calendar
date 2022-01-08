@@ -16,7 +16,7 @@ import { parse, format, startOfDay } from "date-fns";
 
 const styles = {
   container: require("./Container.scss"),
-  day: require("../Day/Day.scss"),
+  day: require("../Day/Day.module.scss"),
 };
 
 export const withDefaultProps = defaultProps({

@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import classNames from "classnames";
 import { getDateString } from "../utils";
 import { format, getDay, isSameYear } from "date-fns";
-import styles from "./Month.scss";
+import styles from "./Month.module.scss";
 
 export default class Month extends PureComponent {
   renderRows() {

@@ -4,7 +4,7 @@ import { withDefaultProps } from "./";
 import { withImmutableProps } from "../utils";
 import { isBefore, format, parse } from "date-fns";
 import enhanceHeader from "../Header/withRange";
-import styles from "../Day/Day.scss";
+import styles from "../Day/Day.module.scss";
 
 let isTouchDevice = false;
 

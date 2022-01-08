@@ -1,9 +1,9 @@
-import React, {PureComponent} from 'react';
-import PropTypes from 'prop-types';
-import {emptyFn} from '../utils';
-import defaultSelectionRenderer from './defaultSelectionRenderer';
-import classNames from 'classnames';
-import styles from './Header.scss';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { emptyFn } from "../utils";
+import defaultSelectionRenderer from "./defaultSelectionRenderer";
+import classNames from "classnames";
+import styles from "./Header.module.scss";
 
 export default class Header extends PureComponent {
   static defaultProps = {
@@ -24,7 +24,7 @@ export default class Header extends PureComponent {
   render() {
     let {
       layout,
-      locale: {blank},
+      locale: { blank },
       selected,
       renderSelection,
       theme,
@@ -33,17 +33,18 @@ export default class Header extends PureComponent {
     return (
       <div
         className={classNames(styles.root, {
-          [styles.landscape]: layout === 'landscape',
+          [styles.landscape]: layout === "landscape",
         })}
         style={{
           backgroundColor: theme.headerColor,
           color: theme.textColor.active,
         }}
       >
-        {
-          selected && renderSelection(selected, this.props) ||
-          <div className={classNames(styles.wrapper, styles.blank)}>{blank}</div>
-        }
+        {(selected && renderSelection(selected, this.props)) || (
+          <div className={classNames(styles.wrapper, styles.blank)}>
+            {blank}
+          </div>
+        )}
       </div>
     );
   }
