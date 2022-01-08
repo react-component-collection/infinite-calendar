@@ -17,7 +17,7 @@
     "styles.css"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rimraf es lib && rollup -c",
     "clean": "",
     "start": "rollup -c -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -35,6 +35,7 @@
     "react-tiny-virtual-list": "^2.0.0",
     "react-transition-group": "^1.1.3",
     "recompose": "^0.22.0",
+    "rimraf": "^3.0.2",
     "rollup-plugin-sass": "^1.2.10"
   },
   "peerDependencies": {
@@ -52,6 +53,7 @@
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-replace": "^3.0.1",
     "babel-eslint": "^7.0.0",
     "babel-plugin-css-modules-transform": "^1.2.1",
     "eslint": "^3.8.1",
@@ -63,7 +65,6 @@
     "react": "^17",
     "react-dom": "^17",
     "rollup": "^2.63.0",
-    "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-polyfill-node": "^0.8.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",

@@ -1,6 +1,6 @@
-module.exports = {
+export default {
   hideYearsOnSelect: true,
-  layout: 'portrait',
+  layout: "portrait",
   overscanMonthCount: 2,
   shouldHeaderAnimate: true,
   showHeader: true,

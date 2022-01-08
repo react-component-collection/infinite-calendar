@@ -1,9 +1,9 @@
-module.exports = {
-  blank: 'Select a date...',
-  headerFormat: 'ddd, MMM Do',
+export default {
+  blank: "Select a date...",
+  headerFormat: "ddd, MMM Do",
   todayLabel: {
-    long: 'Today',
+    long: "Today",
   },
-  weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  weekdays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
   weekStartsOn: 0,
 };
